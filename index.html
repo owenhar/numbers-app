@@ -6,15 +6,16 @@
     <title>Arithmetic</title>
     <style>
       .column {
-        float: left;
-        width: 50%;
-        padding: 10px;
-        box-sizing: border-box;
+      
       }
       .row::after {
-        content: "";
-        clear: both;
-        display: table;
+
+      }
+
+      .row {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
       }
     </style>
   </head>
@@ -50,23 +51,23 @@
           <label for="submit" id="out/">?</label>
         </div>
         <div class="column">
-            <section>
-                <h2>Prime check</h2>                
-                <label>Number to test:</label>
-                <input id="numberToTest"/>
-                <button onclick="isPrime()">Check</button>
-                <label id="primeCheckResult"></label>  
-            </section>
+          <section>
+            <h2>Prime check</h2>
+            <label>Number to test:</label>
+            <input id="numberToTest" />
+            <button onclick="isPrime()">Check</button>
+            <label id="primeCheckResult"></label>
+          </section>
         </div>
         <div class="column">
           <section>
-              <h2>Caesar Cipher</h2>                
-              <label>Text:</label>
-              <input id="text"/>
-              <button onclick="Cipher()">Check</button>
-              <label id="cipherResult"></label>  
+            <h2>Caesar Cipher</h2>
+            <label>Text:</label>
+            <input id="text" />
+            <button onclick="Cipher()">Check</button>
+            <label id="cipherResult"></label>
           </section>
-      </div>
+        </div>
       </div>
     </main>
     <script src="index.js"></script>
