@@ -61,7 +61,8 @@ async function isPrime() {
 
 async function Cipher() {
     const textToCipher = document.getElementById("text");            
-    let text = numberToTest.value;            
+    let text = textToCipher.value;     
+    console.log(text);       
     const response = await fetch("https://ciphers-service-harriowe.onrender.com/ciphers/caesar/" + text + "/3");
     const result = await response.json();
     document.getElementById("cipherResult").innerText = result;
